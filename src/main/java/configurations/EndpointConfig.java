@@ -1,4 +1,4 @@
-package com.egis.interfacetesting.ccd;
+package configurations;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.io.ClassPathResource;
@@ -45,6 +45,14 @@ public class EndpointConfig {
 	
 	@Bean
     public HttpClient validatorHTTPClient() {
+        return CitrusEndpoints.http()
+                            .client()
+                            .requestUrl("http://localhost:8080")
+                            .build();
+    }
+	
+	@Bean
+    public HttpClient PCQSHTTPClient() {
         return CitrusEndpoints.http()
                             .client()
                             .requestUrl("http://localhost:8080")

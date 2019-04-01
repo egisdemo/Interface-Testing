@@ -8,6 +8,8 @@ import com.consol.citrus.annotations.CitrusTest;
 import com.consol.citrus.dsl.testng.TestNGCitrusTestDesigner;
 import com.consol.citrus.ws.client.WebServiceClient;
 
+import factories.adisTestData;
+
 @Test
 public class PersonDetails extends TestNGCitrusTestDesigner{
 	

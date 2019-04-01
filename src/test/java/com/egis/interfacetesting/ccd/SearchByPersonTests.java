@@ -9,9 +9,11 @@ import com.consol.citrus.dsl.testng.TestNGCitrusTestDesigner;
 import com.consol.citrus.http.client.HttpClient;
 import com.consol.citrus.message.MessageType;
 
+import factories.CCDTestData;
+
 @Test
 public class SearchByPersonTests extends TestNGCitrusTestDesigner{
-		
+				
 	@Autowired
     private HttpClient CCDHTTPClient;
 	

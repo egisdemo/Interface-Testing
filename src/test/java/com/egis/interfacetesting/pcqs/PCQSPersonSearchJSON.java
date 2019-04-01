@@ -1,4 +1,4 @@
-package com.egis.interfacetesting.validator;
+package com.egis.interfacetesting.pcqs;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
@@ -11,24 +11,26 @@ import com.consol.citrus.http.client.HttpClient;
 import com.consol.citrus.message.MessageType;
 
 @Test
-public class CCDJSONrequest extends TestNGCitrusTestDesigner{
+public class PCQSPersonSearchJSON extends TestNGCitrusTestDesigner{
 	@Autowired
-    private HttpClient validatorHTTPClient;
+    private HttpClient PCQSHTTPClient;
 	
 	@CitrusTest()
-    public void validataCCDJSON() {	
+    public void validataPCQSPersonSearchJSON() {	
         http()
-            .client(validatorHTTPClient)
+            .client(PCQSHTTPClient)
             .send()
             .post("/validate/ccd")
             .contentType("application/json")
-            .payload(new ClassPathResource("templates/Applicant.json"));
+            .payload(new ClassPathResource("templates/PersonSearchRequest.json"));
         
         http()
-	        .client(validatorHTTPClient)
+	        .client(PCQSHTTPClient)
 	        .receive()
 	        .response(HttpStatus.OK)
-	        .messageType(MessageType.JSON);                  
+	        .messageType(MessageType.JSON)
+	        .payload(new ClassPathResource("templates/PersonSearchResponse.json"));
+        
     }
 
 }
