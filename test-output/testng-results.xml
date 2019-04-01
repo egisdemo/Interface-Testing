@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="4145" started-at="2019-04-01T07:25:43Z" finished-at="2019-04-01T07:25:47Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="4145" started-at="2019-04-01T07:25:43Z" finished-at="2019-04-01T07:25:47Z">
+      <class name="com.egis.interfacetesting.ccd.SearchByPersonTests">
+        <test-method status="PASS" signature="beforeSuite(org.testng.ITestContext)[pri:0, instance:com.egis.interfacetesting.ccd.SearchByPersonTests@62150f9e]" name="beforeSuite" is-config="true" duration-ms="2713" started-at="2019-04-01T12:55:40Z" finished-at="2019-04-01T12:55:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@4d847d32]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:com.egis.interfacetesting.ccd.SearchByPersonTests@62150f9e]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="2" started-at="2019-04-01T12:55:43Z" finished-at="2019-04-01T12:55:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.egis.interfacetesting.ccd.SearchByPersonTests@62150f9e]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="1" started-at="2019-04-01T12:55:43Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2019-04-01T12:55:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.egis.interfacetesting.ccd.SearchByPersonTests@62150f9e]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="2" started-at="2019-04-01T12:55:43Z" finished-at="2019-04-01T12:55:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.egis.interfacetesting.ccd.SearchByPersonTests.WhenSearchingByProvidingAValidNameAndDOB()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="WhenSearchingByProvidingAValidNameAndDOB()[pri:0, instance:com.egis.interfacetesting.ccd.SearchByPersonTests@62150f9e]" name="WhenSearchingByProvidingAValidNameAndDOB" duration-ms="3569" started-at="2019-04-01T12:55:43Z" finished-at="2019-04-01T12:55:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WhenSearchingByProvidingAValidNameAndDOB -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.egis.interfacetesting.ccd.SearchByPersonTests@62150f9e]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2019-04-01T12:55:46Z" finished-at="2019-04-01T12:55:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.egis.interfacetesting.ccd.SearchByPersonTests.WhenSearchingByProvidingAValidNameAndDOB()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="WhenSearchingByProvidingAValidNumber()[pri:0, instance:com.egis.interfacetesting.ccd.SearchByPersonTests@62150f9e]" name="WhenSearchingByProvidingAValidNumber" duration-ms="257" started-at="2019-04-01T12:55:46Z" finished-at="2019-04-01T12:55:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WhenSearchingByProvidingAValidNumber -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.egis.interfacetesting.ccd.SearchByPersonTests@62150f9e]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2019-04-01T12:55:46Z" finished-at="2019-04-01T12:55:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.egis.interfacetesting.ccd.SearchByPersonTests.WhenSearchingByProvidingAValidNumber()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.egis.interfacetesting.ccd.SearchByPersonTests@62150f9e]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2019-04-01T12:55:47Z" finished-at="2019-04-01T12:55:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.egis.interfacetesting.ccd.SearchByPersonTests.WhenSearchingByProvidingAValidNumber()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.egis.interfacetesting.ccd.SearchByPersonTests@62150f9e]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2019-04-01T12:55:47Z" finished-at="2019-04-01T12:55:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.egis.interfacetesting.ccd.SearchByPersonTests.WhenSearchingByProvidingInValidFirstName()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="WhenSearchingByProvidingInValidFirstName()[pri:0, instance:com.egis.interfacetesting.ccd.SearchByPersonTests@62150f9e]" name="WhenSearchingByProvidingInValidFirstName" duration-ms="90" started-at="2019-04-01T12:55:47Z" finished-at="2019-04-01T12:55:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WhenSearchingByProvidingInValidFirstName -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.egis.interfacetesting.ccd.SearchByPersonTests@62150f9e]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2019-04-01T12:55:47Z" finished-at="2019-04-01T12:55:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.egis.interfacetesting.ccd.SearchByPersonTests.WhenSearchingByProvidingInValidFirstName()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.egis.interfacetesting.ccd.SearchByPersonTests@62150f9e]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2019-04-01T12:55:47Z" finished-at="2019-04-01T12:55:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.egis.interfacetesting.ccd.SearchByPersonTests.WhenSearchingByProvidingInValidNumber()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="WhenSearchingByProvidingInValidNumber()[pri:0, instance:com.egis.interfacetesting.ccd.SearchByPersonTests@62150f9e]" name="WhenSearchingByProvidingInValidNumber" duration-ms="105" started-at="2019-04-01T12:55:47Z" finished-at="2019-04-01T12:55:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WhenSearchingByProvidingInValidNumber -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.egis.interfacetesting.ccd.SearchByPersonTests@62150f9e]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="2" started-at="2019-04-01T12:55:47Z" finished-at="2019-04-01T12:55:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.egis.interfacetesting.ccd.SearchByPersonTests.WhenSearchingByProvidingInValidNumber()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:com.egis.interfacetesting.ccd.SearchByPersonTests@62150f9e]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2019-04-01T12:55:47Z" finished-at="2019-04-01T12:55:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+        <test-method status="PASS" signature="afterSuite(org.testng.ITestContext)[pri:0, instance:com.egis.interfacetesting.ccd.SearchByPersonTests@62150f9e]" name="afterSuite" is-config="true" duration-ms="74" started-at="2019-04-01T12:55:47Z" finished-at="2019-04-01T12:55:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@4d847d32]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.egis.interfacetesting.ccd.SearchByPersonTests -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

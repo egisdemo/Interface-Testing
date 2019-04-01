@@ -1,4 +1,4 @@
-package com.egis.ccd.interfacetesting;
+package com.egis.interfacetesting.ccd;
 
 import com.consol.citrus.dsl.testng.TestNGCitrusTestDesigner;
 

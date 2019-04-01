@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<personDetailRequest>
+  <firstName>str1234</firstName>
+  <aNumber>str1234</aNumber>
+  <lastName>str1234</lastName>
+</personDetailRequest>

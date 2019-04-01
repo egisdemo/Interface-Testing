@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<personDetailResponse>
+  <person>
+    <firstName>${firstName}</firstName>
+    <aNumber>${aNumber}</aNumber>
+    <lastName>${lastName}</lastName>
+    <middleName>@ignore@</middleName>
+  </person>
+</personDetailResponse>

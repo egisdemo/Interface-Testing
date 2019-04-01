@@ -1,0 +1,34 @@
+{
+  "aNumber": "string",
+  "anumber": "string",
+  "applicantStatus": "string",
+  "applicationOver16": false,
+  "birthplace": "string",
+  "case": {
+    "applicantBiometric": {
+      "bioImage": "string",
+      "bioType": "string"
+    },
+    "fbiClearance": false,
+    "interviewAppointment": "string",
+    "interviewStatus": "New",
+    "postClearance": false,
+    "siteCd": "string"
+  },
+  "crossRefId": "string",
+  "dob": "2001-04-01",
+  "firstName": "string",
+  "followToJoin": false,
+  "identFin": "string",
+  "issued": false,
+  "lastName": "string",
+  "middleName": "string",
+  "nationality": "string",
+  "paApplicantId": "string",
+  "passportNumber": "string",
+  "refused": false,
+  "totalApplicants": 0,
+  "traveling": false,
+  "visaControlNo": "string",
+  "willJoinApplicant": false
+}

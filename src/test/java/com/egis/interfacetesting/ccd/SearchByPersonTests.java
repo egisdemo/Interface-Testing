@@ -1,4 +1,4 @@
-package com.egis.ccd.interfacetesting;
+package com.egis.interfacetesting.ccd;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -11,14 +11,14 @@ import com.consol.citrus.message.MessageType;
 
 @Test
 public class SearchByPersonTests extends TestNGCitrusTestDesigner{
-	
+		
 	@Autowired
-    private HttpClient CCDClient;
+    private HttpClient CCDHTTPClient;
 	
 	@CitrusTest()
     public void WhenSearchingByProvidingAValidNumber() {	
         http()
-            .client(CCDClient)
+            .client(CCDHTTPClient)
             .send()
             .get(CCDTestData.CCD_GET_URI_SEARCHBYNUMBER)
             .contentType(CCDTestData.CCD_CONTENTTYPE_APPLICATION_JSON)
@@ -26,7 +26,7 @@ public class SearchByPersonTests extends TestNGCitrusTestDesigner{
             
 
         http()
-            .client(CCDClient)
+            .client(CCDHTTPClient)
             .receive()
             .response(HttpStatus.OK)
             .messageType(MessageType.JSON)
@@ -37,7 +37,7 @@ public class SearchByPersonTests extends TestNGCitrusTestDesigner{
     public void WhenSearchingByProvidingAValidNameAndDOB() {
     	load("classpath:testdata/ccd_data.properties");
         http()
-            .client(CCDClient)
+            .client(CCDHTTPClient)
             .send()
             .get(CCDTestData.CCD_GET_URI_SEARCHBYNAMEANDDOB)
             .contentType(CCDTestData.CCD_CONTENTTYPE_APPLICATION_JSON)
@@ -47,7 +47,7 @@ public class SearchByPersonTests extends TestNGCitrusTestDesigner{
             .queryParam("endDob", CCDTestData.CCD_DATA_ENDDOBE_VALID);
 
         http()
-            .client(CCDClient)
+            .client(CCDHTTPClient)
             .receive()
             .response(HttpStatus.OK)
             .messageType(MessageType.JSON);    
@@ -56,14 +56,14 @@ public class SearchByPersonTests extends TestNGCitrusTestDesigner{
     @CitrusTest
     public void WhenSearchingByProvidingInValidNumber() {
     	 http()
-	         .client(CCDClient)
+	         .client(CCDHTTPClient)
 	         .send()
 	         .get(CCDTestData.CCD_GET_URI_SEARCHBYNUMBER)
 	         .contentType(CCDTestData.CCD_CONTENTTYPE_APPLICATION_JSON)
 	         .queryParam("aNumber", CCDTestData.CCD_DATA_ANUMBER_INVALID);
 
     	 http()
-    	    .client(CCDClient)
+    	    .client(CCDHTTPClient)
     	    .receive()
     	    .response(HttpStatus.INTERNAL_SERVER_ERROR)
     	    .messageType(MessageType.JSON);
@@ -72,7 +72,7 @@ public class SearchByPersonTests extends TestNGCitrusTestDesigner{
     @CitrusTest
     public void WhenSearchingByProvidingInValidFirstName() {
     	http()
-        .client(CCDClient)
+        .client(CCDHTTPClient)
         .send()
         .get("/api/v1/applicant/searchByNameAndDOB")
         .contentType("application/json")
@@ -82,7 +82,7 @@ public class SearchByPersonTests extends TestNGCitrusTestDesigner{
         .queryParam("endDob", CCDTestData.CCD_DATA_ENDDOBE_VALID);
 
     http()
-        .client(CCDClient)
+        .client(CCDHTTPClient)
         .receive()
         .response(HttpStatus.INTERNAL_SERVER_ERROR)
         .messageType(MessageType.JSON);

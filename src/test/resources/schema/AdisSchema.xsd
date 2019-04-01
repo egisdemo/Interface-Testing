@@ -1,0 +1,233 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+	elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="http://egis.nre.com/common/domain">
+
+	<xs:element name="personDetailRequest"> 
+
+		<xs:complexType>
+
+			<xs:sequence>
+
+				<xs:element name="firstName" type="xs:string"></xs:element>
+
+				<xs:element name="aNumber" type="xs:string"></xs:element>
+
+				<xs:element name="lastName" type="xs:string"></xs:element>
+
+			</xs:sequence>
+
+		</xs:complexType>
+
+	</xs:element>
+
+	<xs:element name="personDetailResponse">
+
+		<xs:complexType>
+
+			<xs:sequence>
+
+				<xs:element name="person">
+
+					<xs:complexType>
+
+						<xs:sequence>
+
+							<xs:element name="firstName" type="xs:string"></xs:element>
+
+							<xs:element name="aNumber" type="xs:string"></xs:element>
+
+							<xs:element name="lastName" type="xs:string"></xs:element>
+
+							<xs:element name="middleName" type="xs:string"></xs:element>
+
+						</xs:sequence>
+
+					</xs:complexType>
+
+				</xs:element>
+
+			</xs:sequence>
+
+		</xs:complexType>
+
+	</xs:element>
+
+	<xs:element name="activityDetailsRequest">
+
+		<xs:complexType>
+
+			<xs:sequence>
+
+				<xs:element name="aNumber" type="xs:string"></xs:element>
+
+			</xs:sequence>
+
+		</xs:complexType>
+
+	</xs:element>
+
+	<xs:element name="activityDetailsResponse">
+
+		<xs:complexType>
+
+			<xs:sequence>
+
+				<xs:element name="activity" type="xs:string"></xs:element>
+
+				<xs:element name="result" type="xs:string"></xs:element>
+
+				<xs:element name="resultDate" type="xs:date"></xs:element>
+
+				<xs:element name="person">
+
+					<xs:complexType>
+
+						<xs:sequence>
+
+							<xs:element name="firstName" type="xs:string"></xs:element>
+
+							<xs:element name="id" type="xs:string"></xs:element>
+
+							<xs:element name="idType" type="xs:string"></xs:element>
+
+							<xs:element name="lastName" type="xs:string"></xs:element>
+
+							<xs:element name="middleName" type="xs:string"></xs:element>
+
+							<xs:element name="dob" type="xs:date"></xs:element>
+
+						</xs:sequence>
+
+					</xs:complexType>
+
+				</xs:element>
+
+				<xs:element name="biographicData">
+
+					<xs:complexType>
+
+						<xs:sequence>
+
+							<xs:element name="biometric">
+
+								<xs:complexType>
+
+									<xs:sequence>
+
+										<xs:element name="image" type="xs:string"></xs:element>
+
+										<xs:element name="imageType" type="xs:string"></xs:element>
+
+									</xs:sequence>
+
+								</xs:complexType>
+
+							</xs:element>
+
+							<xs:element name="citizenship" type="xs:string"></xs:element>
+
+							<xs:element name="classofAdmission"
+
+								type="xs:string"></xs:element>
+
+							<xs:element name="countryOfBirth" type="xs:string"></xs:element>
+
+							<xs:element name="countryOfResidence"
+
+								type="xs:string"></xs:element>
+
+							<xs:element name="driverLicense" type="xs:string"></xs:element>
+
+							<xs:element name="gender" type="xs:string"></xs:element>
+
+							<xs:element name="licensePlateNumber"
+
+								type="xs:string"></xs:element>
+
+							<xs:element name="nationality" type="xs:string"></xs:element>
+
+							<xs:element name="ssn" type="xs:string"></xs:element>
+
+							<xs:element name="travelData">
+
+								<xs:complexType>
+
+									<xs:sequence>
+
+										<xs:element name="admitUntilDate"
+
+											type="xs:string"></xs:element>
+
+										<xs:element name="airplaceCarrierCode"
+
+											type="xs:string"></xs:element>
+
+										<xs:element name="arrivateDate" type="xs:date"></xs:element>
+
+										<xs:element name="departureDate" type="xs:date"></xs:element>
+
+										<xs:element name="destinationAddress"
+
+											type="xs:string"></xs:element>
+
+										<xs:element name="inspectorComments"
+
+											type="xs:string"></xs:element>
+
+										<xs:element name="passengerNameRecord"
+
+											type="xs:string"></xs:element>
+
+										<xs:element name="passengerStatus"
+
+											type="xs:string"></xs:element>
+
+										<xs:element name="passportInfo" type="xs:string"></xs:element>
+
+										<xs:element name="vesselPortandName"
+
+											type="xs:string"></xs:element>
+
+										<xs:element name="visaInfo" type="xs:string"></xs:element>
+
+									</xs:sequence>
+
+								</xs:complexType>
+
+							</xs:element>
+
+							<xs:element name="travelDocumentInformation">
+
+								<xs:complexType>
+
+									<xs:sequence>
+
+										<xs:element name="docType" type="xs:string"></xs:element>
+
+										<xs:element name="docNumber" type="xs:string"></xs:element>
+
+										<xs:element name="countryCode" type="xs:string"></xs:element>
+
+										<xs:element name="dateOfIssuance" type="xs:string"></xs:element>									
+
+									</xs:sequence>
+
+								</xs:complexType>								
+
+							</xs:element>
+
+							<xs:element name="vehicleId" type="xs:int"></xs:element>
+
+						</xs:sequence>
+
+					</xs:complexType>
+
+				</xs:element>
+
+			</xs:sequence>
+
+		</xs:complexType>
+
+	</xs:element>
+
+</xs:schema>
