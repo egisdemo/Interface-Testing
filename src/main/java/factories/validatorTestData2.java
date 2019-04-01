@@ -1,6 +1,6 @@
 package factories;
 
-public final class pcqsTestData {
+public final class validatorTestData2 {
 	/*public static final String ADIS_DATA_PERSONRESPONSE_FIRSTNAME = "Jhon";
 	public static final String ADIS_DATA_PERSONRESPONSE_LASTNAME = "Jhonny";
 	public static final String ADIS_DATA_PERSONRESPONSE_ANUMBER = "A123456789";*/
@@ -12,7 +12,7 @@ public final class pcqsTestData {
 		   and so on. Thus, the caller should be prevented from constructing objects of 
 		   this class, by declaring this private constructor. 
 		  */
-		  private pcqsTestData(){	 
+		  private validatorTestData2(){	 
 		    throw new AssertionError();
 		  }
 }

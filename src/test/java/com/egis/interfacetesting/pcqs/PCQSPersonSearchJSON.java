@@ -29,8 +29,7 @@ public class PCQSPersonSearchJSON extends TestNGCitrusTestDesigner{
 	        .receive()
 	        .response(HttpStatus.OK)
 	        .messageType(MessageType.JSON)
-	        .payload(new ClassPathResource("templates/PersonSearchResponse.json"));
-        
+	        .payload(new ClassPathResource("templates/PersonSearchResponse.json"));        
     }
 
 }
