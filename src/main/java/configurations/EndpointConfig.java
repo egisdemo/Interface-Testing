@@ -8,6 +8,9 @@ import org.springframework.xml.xsd.SimpleXsdSchema;
 
 import com.consol.citrus.dsl.endpoint.CitrusEndpoints;
 import com.consol.citrus.http.client.HttpClient;
+import com.consol.citrus.kafka.embedded.EmbeddedKafkaServer;
+import com.consol.citrus.kafka.embedded.EmbeddedKafkaServerBuilder;
+import com.consol.citrus.kafka.endpoint.KafkaEndpoint;
 import com.consol.citrus.ws.client.WebServiceClient;
 import com.consol.citrus.xml.XsdSchemaRepository;
 
@@ -29,6 +32,58 @@ public class EndpointConfig {
         schemaRepository.getSchemas().add(todoListSchema());
         return schemaRepository;
     }
+    
+    /**
+     * Kafka server    
+     * @return
+     */
+    @Bean
+    public EmbeddedKafkaServer embeddedKafkaServer() {
+        return new EmbeddedKafkaServerBuilder()
+                .kafkaServerPort(9092)
+                .topics("nre.egis.dos.request", "nre.egis.dos.response", "nre.egis.adis.request", "nre.egis.adis.response")
+                .build();
+    }
+    
+    /**
+     * Kafka cleints
+     */
+   /* @Bean
+    public KafkaEndpoint PCQSDOSRequestKafkaEndpoint() {
+        return CitrusEndpoints.kafka()
+                .asynchronous()
+                .server("localhost:9092")
+                .topic("nre.egis.dos.request")
+                .build();
+    }*/
+    
+    @Bean
+    public KafkaEndpoint PCQSADISRequestKafkaEndpoint() {
+        return CitrusEndpoints.kafka()
+                .asynchronous()
+                .server("localhost:9092")
+                .topic("nre.egis.adis.request")
+                .build();
+    }
+    
+   /* @Bean
+    public KafkaEndpoint PCQSDOSRepsonseKafkaEndpoint() {
+        return CitrusEndpoints.kafka()
+                .asynchronous()
+                .server("localhost:9092")
+                .topic("nre.egis.dos.response")
+                .build();
+    }
+    
+    @Bean
+    public KafkaEndpoint PCQSADISRepsonseKafkaEndpoint() {
+        return CitrusEndpoints.kafka()
+                .asynchronous()
+                .server("localhost:9092")
+                .topic("nre.egis.adis.response")
+                .build();
+    }*/
+    
     
     /**
      * HTTP clients setup
@@ -56,6 +111,14 @@ public class EndpointConfig {
         return CitrusEndpoints.http()
                             .client()
                             .requestUrl("http://localhost:8080")
+                            .build();
+    }
+	
+	@Bean
+    public HttpClient TransformerHTTPClient() {
+        return CitrusEndpoints.http()
+                            .client()
+                            .requestUrl("http://localhost:8852")
                             .build();
     }
 	

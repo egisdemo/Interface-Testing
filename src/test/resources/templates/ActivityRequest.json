@@ -1,0 +1,12 @@
+{
+   "idType": "anumber",
+   "id": "A21123123",
+   "systems": [
+       {
+           "sourceSystem": "adis"
+       },
+       {
+           "sourceSystem": "dos"
+       }
+   ]
+}

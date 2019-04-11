@@ -8,28 +8,43 @@ import org.testng.annotations.Test;
 import com.consol.citrus.annotations.CitrusTest;
 import com.consol.citrus.dsl.testng.TestNGCitrusTestDesigner;
 import com.consol.citrus.http.client.HttpClient;
+import com.consol.citrus.kafka.endpoint.KafkaEndpoint;
 import com.consol.citrus.message.MessageType;
+
+import factories.adisTestData;
 
 @Test
 public class PCQSPersonSearchJSON extends TestNGCitrusTestDesigner{
 	@Autowired
     private HttpClient PCQSHTTPClient;
 	
+	@Autowired
+    private KafkaEndpoint PCQSADISRequestKafkaEndpoint;
+	
 	@CitrusTest()
-    public void validataPCQSPersonSearchJSON() {	
-        http()
-            .client(PCQSHTTPClient)
-            .send()
-            .post("/validate/ccd")
-            .contentType("application/json")
-            .payload(new ClassPathResource("templates/PersonSearchRequest.json"));
-        
-        http()
+    public void TestPCQSAggregatorKAFKAIntegrationGetActivityJSON() {
+		 variable("requestid", "citrus:randomNumber(6)");
+		 
+	        http()
+	            .client(PCQSHTTPClient)
+	            .send()
+	            .post("query-aggregator/v1/egis/${requestid}/getActivity")
+	            .contentType("application/json")
+	            .payload(new ClassPathResource("templates/ActivityRequest.json"));
+	        
+	        http()
 	        .client(PCQSHTTPClient)
 	        .receive()
 	        .response(HttpStatus.OK)
+	        .messageType(MessageType.JSON);
+	        //.payload(new ClassPathResource("templates/ActivityRequest.json"));       
+	        
+	        receive(PCQSADISRequestKafkaEndpoint)
 	        .messageType(MessageType.JSON)
-	        .payload(new ClassPathResource("templates/PersonSearchResponse.json"));        
+	        .payload("{\"sourceSystem\":\"adis\"}");
+	        
+	        
+	        
     }
 
 }

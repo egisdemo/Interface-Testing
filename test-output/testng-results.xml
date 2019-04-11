@@ -1,151 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="4145" started-at="2019-04-01T07:25:43Z" finished-at="2019-04-01T07:25:47Z">
+  <suite name="Default suite" duration-ms="2105" started-at="2019-04-05T18:01:26Z" finished-at="2019-04-05T18:01:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="4145" started-at="2019-04-01T07:25:43Z" finished-at="2019-04-01T07:25:47Z">
-      <class name="com.egis.interfacetesting.ccd.SearchByPersonTests">
-        <test-method status="PASS" signature="beforeSuite(org.testng.ITestContext)[pri:0, instance:com.egis.interfacetesting.ccd.SearchByPersonTests@62150f9e]" name="beforeSuite" is-config="true" duration-ms="2713" started-at="2019-04-01T12:55:40Z" finished-at="2019-04-01T12:55:43Z">
+    <test name="Default test" duration-ms="2105" started-at="2019-04-05T18:01:26Z" finished-at="2019-04-05T18:01:28Z">
+      <class name="com.egis.interfacetesting.pcqs.PCQSPersonSearchJSON">
+        <test-method status="PASS" signature="beforeSuite(org.testng.ITestContext)[pri:0, instance:com.egis.interfacetesting.pcqs.PCQSPersonSearchJSON@515c6049]" name="beforeSuite" is-config="true" duration-ms="8317" started-at="2019-04-05T23:31:18Z" finished-at="2019-04-05T23:31:26Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@4d847d32]]>
+                <![CDATA[org.testng.TestRunner@a83495d]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:com.egis.interfacetesting.ccd.SearchByPersonTests@62150f9e]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="2" started-at="2019-04-01T12:55:43Z" finished-at="2019-04-01T12:55:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestClass -->
-        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.egis.interfacetesting.ccd.SearchByPersonTests@62150f9e]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="1" started-at="2019-04-01T12:55:43Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2019-04-01T12:55:43Z">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.egis.interfacetesting.pcqs.PCQSPersonSearchJSON@515c6049]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="4" started-at="2019-04-05T23:31:26Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2019-04-05T23:31:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.egis.interfacetesting.ccd.SearchByPersonTests@62150f9e]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="2" started-at="2019-04-01T12:55:43Z" finished-at="2019-04-01T12:55:43Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:com.egis.interfacetesting.pcqs.PCQSPersonSearchJSON@515c6049]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="0" started-at="2019-04-05T23:31:26Z" finished-at="2019-04-05T23:31:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="FAIL" signature="TestPCQSAggregatorKAFKAIntegrationPersonSearchJSON()[pri:0, instance:com.egis.interfacetesting.pcqs.PCQSPersonSearchJSON@515c6049]" name="TestPCQSAggregatorKAFKAIntegrationPersonSearchJSON" duration-ms="2065" started-at="2019-04-05T23:31:26Z" finished-at="2019-04-05T23:31:28Z">
+          <exception class="com.consol.citrus.exceptions.TestCaseFailedException">
+            <message>
+              <![CDATA[Failed to validate JSON text:
+{"timestamp":1554487288595,"path":"/query-aggregator/v1/egis/123456/getActivity","status":415,"error":"Unsupported Media Type","message":"Content type 'text/plain;charset=UTF-8' not supported"} Number of JSON entries not equal for element: '$.', expected '1' but was '5']]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.consol.citrus.exceptions.TestCaseFailedException: Failed to validate JSON text:
+{"timestamp":1554487288595,"path":"/query-aggregator/v1/egis/123456/getActivity","status":415,"error":"Unsupported Media Type","message":"Content type 'text/plain;charset=UTF-8' not supported"} Number of JSON entries not equal for element: '$.', expected '1' but was '5'
+	at com.consol.citrus.TestCase.executeAction(TestCase.java:227)
+	at com.consol.citrus.TestCase.doExecute(TestCase.java:152)
+	at com.consol.citrus.actions.AbstractTestAction.execute(AbstractTestAction.java:42)
+	at com.consol.citrus.Citrus.run(Citrus.java:403)
+	at com.consol.citrus.testng.AbstractTestNGCitrusTest.invokeTestMethod(AbstractTestNGCitrusTest.java:131)
+	at com.consol.citrus.dsl.testng.TestNGCitrusTest.invokeTestMethod(TestNGCitrusTest.java:121)
+	at com.consol.citrus.dsl.testng.TestNGCitrusTestDesigner.invokeTestMethod(TestNGCitrusTestDesigner.java:73)
+	at com.consol.citrus.dsl.testng.TestNGCitrusTest.run(TestNGCitrusTest.java:110)
+	at com.consol.citrus.dsl.testng.TestNGCitrusTest.run(TestNGCitrusTest.java:56)
+	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:221)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:657)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: com.consol.citrus.exceptions.ValidationException: Failed to validate JSON text:
+{"timestamp":1554487288595,"path":"/query-aggregator/v1/egis/123456/getActivity","status":415,"error":"Unsupported Media Type","message":"Content type 'text/plain;charset=UTF-8' not supported"} Number of JSON entries not equal for element: '$.', expected '1' but was '5'
+	at com.consol.citrus.validation.json.JsonTextMessageValidator.validateMessage(JsonTextMessageValidator.java:127)
+	at com.consol.citrus.validation.json.JsonTextMessageValidator.validateMessage(JsonTextMessageValidator.java:62)
+	at com.consol.citrus.validation.AbstractMessageValidator.validateMessage(AbstractMessageValidator.java:46)
+	at com.consol.citrus.actions.ReceiveMessageAction.validateMessage(ReceiveMessageAction.java:231)
+	at com.consol.citrus.actions.ReceiveMessageAction.doExecute(ReceiveMessageAction.java:128)
+	at com.consol.citrus.actions.AbstractTestAction.execute(AbstractTestAction.java:42)
+	at com.consol.citrus.dsl.actions.DelegatingTestAction.doExecute(DelegatingTestAction.java:54)
+	at com.consol.citrus.actions.AbstractTestAction.execute(AbstractTestAction.java:42)
+	at com.consol.citrus.TestCase.executeAction(TestCase.java:220)
+	... 29 more
+Caused by: java.lang.IllegalArgumentException: Number of JSON entries not equal for element: '$.', expected '1' but was '5'
+	at org.springframework.util.Assert.isTrue(Assert.java:116)
+	at com.consol.citrus.validation.json.JsonTextMessageValidator.validateJson(JsonTextMessageValidator.java:170)
+	at com.consol.citrus.validation.json.JsonTextMessageValidator.validateMessage(JsonTextMessageValidator.java:115)
+	... 37 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.consol.citrus.exceptions.TestCaseFailedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestPCQSAggregatorKAFKAIntegrationPersonSearchJSON -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.egis.interfacetesting.pcqs.PCQSPersonSearchJSON@515c6049]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2019-04-05T23:31:26Z" finished-at="2019-04-05T23:31:26Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.egis.interfacetesting.ccd.SearchByPersonTests.WhenSearchingByProvidingAValidNameAndDOB()]]>
+                <![CDATA[public void com.egis.interfacetesting.pcqs.PCQSPersonSearchJSON.TestPCQSAggregatorKAFKAIntegrationPersonSearchJSON()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="WhenSearchingByProvidingAValidNameAndDOB()[pri:0, instance:com.egis.interfacetesting.ccd.SearchByPersonTests@62150f9e]" name="WhenSearchingByProvidingAValidNameAndDOB" duration-ms="3569" started-at="2019-04-01T12:55:43Z" finished-at="2019-04-01T12:55:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- WhenSearchingByProvidingAValidNameAndDOB -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.egis.interfacetesting.ccd.SearchByPersonTests@62150f9e]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2019-04-01T12:55:46Z" finished-at="2019-04-01T12:55:46Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.egis.interfacetesting.ccd.SearchByPersonTests.WhenSearchingByProvidingAValidNameAndDOB()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="WhenSearchingByProvidingAValidNumber()[pri:0, instance:com.egis.interfacetesting.ccd.SearchByPersonTests@62150f9e]" name="WhenSearchingByProvidingAValidNumber" duration-ms="257" started-at="2019-04-01T12:55:46Z" finished-at="2019-04-01T12:55:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- WhenSearchingByProvidingAValidNumber -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.egis.interfacetesting.ccd.SearchByPersonTests@62150f9e]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2019-04-01T12:55:46Z" finished-at="2019-04-01T12:55:46Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.egis.interfacetesting.ccd.SearchByPersonTests.WhenSearchingByProvidingAValidNumber()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.egis.interfacetesting.ccd.SearchByPersonTests@62150f9e]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2019-04-01T12:55:47Z" finished-at="2019-04-01T12:55:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.egis.interfacetesting.ccd.SearchByPersonTests.WhenSearchingByProvidingAValidNumber()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.egis.interfacetesting.ccd.SearchByPersonTests@62150f9e]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2019-04-01T12:55:47Z" finished-at="2019-04-01T12:55:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.egis.interfacetesting.ccd.SearchByPersonTests.WhenSearchingByProvidingInValidFirstName()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="WhenSearchingByProvidingInValidFirstName()[pri:0, instance:com.egis.interfacetesting.ccd.SearchByPersonTests@62150f9e]" name="WhenSearchingByProvidingInValidFirstName" duration-ms="90" started-at="2019-04-01T12:55:47Z" finished-at="2019-04-01T12:55:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- WhenSearchingByProvidingInValidFirstName -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.egis.interfacetesting.ccd.SearchByPersonTests@62150f9e]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2019-04-01T12:55:47Z" finished-at="2019-04-01T12:55:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.egis.interfacetesting.ccd.SearchByPersonTests.WhenSearchingByProvidingInValidFirstName()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.egis.interfacetesting.ccd.SearchByPersonTests@62150f9e]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2019-04-01T12:55:47Z" finished-at="2019-04-01T12:55:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.egis.interfacetesting.ccd.SearchByPersonTests.WhenSearchingByProvidingInValidNumber()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="WhenSearchingByProvidingInValidNumber()[pri:0, instance:com.egis.interfacetesting.ccd.SearchByPersonTests@62150f9e]" name="WhenSearchingByProvidingInValidNumber" duration-ms="105" started-at="2019-04-01T12:55:47Z" finished-at="2019-04-01T12:55:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- WhenSearchingByProvidingInValidNumber -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.egis.interfacetesting.ccd.SearchByPersonTests@62150f9e]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="2" started-at="2019-04-01T12:55:47Z" finished-at="2019-04-01T12:55:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.egis.interfacetesting.ccd.SearchByPersonTests.WhenSearchingByProvidingInValidNumber()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:com.egis.interfacetesting.ccd.SearchByPersonTests@62150f9e]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2019-04-01T12:55:47Z" finished-at="2019-04-01T12:55:47Z">
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:com.egis.interfacetesting.pcqs.PCQSPersonSearchJSON@515c6049]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2019-04-05T23:31:28Z" finished-at="2019-04-05T23:31:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestClass -->
-        <test-method status="PASS" signature="afterSuite(org.testng.ITestContext)[pri:0, instance:com.egis.interfacetesting.ccd.SearchByPersonTests@62150f9e]" name="afterSuite" is-config="true" duration-ms="74" started-at="2019-04-01T12:55:47Z" finished-at="2019-04-01T12:55:47Z">
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.egis.interfacetesting.pcqs.PCQSPersonSearchJSON@515c6049]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2019-04-05T23:31:28Z" finished-at="2019-04-05T23:31:28Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@4d847d32]]>
+                <![CDATA[public void com.egis.interfacetesting.pcqs.PCQSPersonSearchJSON.TestPCQSAggregatorKAFKAIntegrationPersonSearchJSON()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="afterSuite(org.testng.ITestContext)[pri:0, instance:com.egis.interfacetesting.pcqs.PCQSPersonSearchJSON@515c6049]" name="afterSuite" is-config="true" duration-ms="169" started-at="2019-04-05T23:31:28Z" finished-at="2019-04-05T23:31:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@a83495d]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- com.egis.interfacetesting.ccd.SearchByPersonTests -->
+      </class> <!-- com.egis.interfacetesting.pcqs.PCQSPersonSearchJSON -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

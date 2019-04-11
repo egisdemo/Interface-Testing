@@ -1,4 +1,4 @@
-package com.egis.interfacetesting.validator;
+package com.egis.interfacetesting.transform;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
@@ -11,21 +11,22 @@ import com.consol.citrus.http.client.HttpClient;
 import com.consol.citrus.message.MessageType;
 
 @Test
-public class CCDJSONrequest extends TestNGCitrusTestDesigner{
+public class TransformJSONrequest extends TestNGCitrusTestDesigner{
 	@Autowired
-    private HttpClient validatorHTTPClient;
+    private HttpClient TransformerHTTPClient;
 	
 	@CitrusTest()
-    public void validataCCDJSON() {	
+    public void validataTranformCCDActivityrequestSON() {	
         http()
-            .client(validatorHTTPClient)
+            .client(TransformerHTTPClient)
             .send()
-            .post("/validate/ccd")
+            .post("/api/v1/ccd/from")
             .contentType("application/json")
-            .payload(new ClassPathResource("templates/Applicant.json"));
+            .payload(new ClassPathResource("templates/Applicant.json"));     
+       
         
         http()
-	        .client(validatorHTTPClient)
+	        .client(TransformerHTTPClient)
 	        .receive()
 	        .response(HttpStatus.OK)
 	        .messageType(MessageType.JSON);                  

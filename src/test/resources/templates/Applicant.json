@@ -1,34 +1,32 @@
-{
-  "aNumber": "string",
-  "anumber": "string",
-  "applicantStatus": "string",
-  "applicationOver16": false,
-  "birthplace": "string",
-  "case": {
-    "applicantBiometric": {
-      "bioImage": "string",
-      "bioType": "string"
-    },
-    "fbiClearance": false,
-    "interviewAppointment": "string",
-    "interviewStatus": "New",
-    "postClearance": false,
-    "siteCd": "string"
-  },
-  "crossRefId": "string",
-  "dob": "2001-04-01",
-  "firstName": "string",
-  "followToJoin": false,
-  "identFin": "string",
-  "issued": false,
-  "lastName": "string",
-  "middleName": "string",
-  "nationality": "string",
-  "paApplicantId": "string",
-  "passportNumber": "string",
-  "refused": false,
-  "totalApplicants": 0,
-  "traveling": false,
-  "visaControlNo": "string",
-  "willJoinApplicant": false
-}
+[
+  {
+    "first_name": "Scott",
+    "last_name": "Tiger",
+    "middle_name": "Irwin",
+    "dob": "1980-02-02",
+    "nationality_cd": "USA",
+    "birth_place_cd": "USA",
+    "applicant_status": "Active",
+    "pa_applicant_id": "212345",
+    "cross_ref_id": "312345",
+    "follow_to_join": "true",
+    "total_applicants": "2",
+    "issued": "true",
+    "refused": "false",
+    "traveling": "true",
+    "will_join_applicant": "true",
+    "passport_number": "512345678",
+    "visa_ctrl_number": "712345678",
+    "a_number": "A123456789",
+    "applicant_biometric": [
+      {
+        "bio_type": "FACE",
+        "bio_image": "https://ccd-biometrics-data.s3.amazonaws.com/faces/Face_1.jpg"
+      },
+      {
+        "bio_type": "FNG",
+        "bio_image": "https://ccd-biometrics-data.s3.amazonaws.com/finger-prints/FP_1.jpg"
+      }
+    ]
+  }
+]
