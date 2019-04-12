@@ -42,9 +42,6 @@ public class PCQSPersonSearchJSON extends TestNGCitrusTestDesigner{
 	        receive(PCQSADISRequestKafkaEndpoint)
 	        .messageType(MessageType.JSON)
 	        .payload("{\"sourceSystem\":\"adis\"}");
-	        
-	        
-	        
     }
 
 }
