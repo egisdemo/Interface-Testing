@@ -16,13 +16,13 @@ public class ValidatorJSONrequest extends TestNGCitrusTestDesigner{
     private HttpClient validatorHTTPClient;
 	
 	@CitrusTest()
-    public void validataCCDJSON() {	
+    public void validataCCDJSONRequest() {	
         http()
             .client(validatorHTTPClient)
             .send()
-            .post("/validate/ccd")
+            .post("/validator/api/v1/ccd/person/request")
             .contentType("application/json")
-            .payload(new ClassPathResource("templates/Applicant.json"));
+            .payload(new ClassPathResource("templates/PersonSearchRequest.json"));
         
         http()
 	        .client(validatorHTTPClient)

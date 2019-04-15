@@ -166,7 +166,7 @@ public class EndpointConfig {
 	 * HTTP server endpoints
 	 */
 	
-	@Bean
+	/*@Bean
     public HttpServer CCDHTTPServer() throws Exception {
         return CitrusEndpoints.http()
                 .server()
@@ -174,7 +174,7 @@ public class EndpointConfig {
                 //.endpointAdapter(staticEndpointAdapter())
                 .autoStart(true)
                 .build();
-    }
+    }*/
 	
 	@Bean
     public HttpServer TransformerServer() throws Exception {
