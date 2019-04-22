@@ -36,7 +36,7 @@ public class MappingJSONRequest extends TestNGCitrusTestDesigner{
 	        .receive()
 	        .response(HttpStatus.OK)
 	        .messageType(MessageType.JSON);
-	        //.payload(new ClassPathResource("templates/ActivityRequest.json"));       
+	        //.payload(new ClassPathResource("templates/ActivityRequest.json")); //      
 	        
 	       /* receive(PCQSADISRequestKafkaEndpoint)
 	        .messageType(MessageType.JSON)
