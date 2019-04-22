@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\kartthik.s\AppData\Local\Temp\testng-eclipse-1626517923\testng-customsuite.xml</span>
+                    <span>C:\Users\kartthik.s\AppData\Local\Temp\testng-eclipse--1866574018\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.egis.interfacetesting.pcqs.PCQSPersonSearchJSON" hash-for-method="TestPCQSAggregatorKAFKAIntegrationPersonSearchJSON">TestPCQSAggregatorKAFKAIntegrationPersonSearchJSON</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.egis.interfacetesting.mapping.MappingJSONRequest" hash-for-method="TestPCQSAggregatorKAFKAIntegrationGetActivityJSON">TestPCQSAggregatorKAFKAIntegrationGetActivityJSON</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -120,16 +120,15 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.egis.interfacetesting.pcqs.PCQSPersonSearchJSON</span>
+              <span class="class-name">com.egis.interfacetesting.mapping.MappingJSONRequest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TestPCQSAggregatorKAFKAIntegrationPersonSearchJSON">
-                  </a> <!-- TestPCQSAggregatorKAFKAIntegrationPersonSearchJSON -->
-                  <span class="method-name">TestPCQSAggregatorKAFKAIntegrationPersonSearchJSON</span>
-                  <div class="stack-trace">com.consol.citrus.exceptions.TestCaseFailedException: Failed to validate JSON text:
-{&quot;timestamp&quot;:1554487288595,&quot;path&quot;:&quot;/query-aggregator/v1/egis/123456/getActivity&quot;,&quot;status&quot;:415,&quot;error&quot;:&quot;Unsupported Media Type&quot;,&quot;message&quot;:&quot;Content type &apos;text/plain;charset=UTF-8&apos; not supported&quot;} Number of JSON entries not equal for element: &apos;$.&apos;, expected &apos;1&apos; but was &apos;5&apos;
+                  <a name="TestPCQSAggregatorKAFKAIntegrationGetActivityJSON">
+                  </a> <!-- TestPCQSAggregatorKAFKAIntegrationGetActivityJSON -->
+                  <span class="method-name">TestPCQSAggregatorKAFKAIntegrationGetActivityJSON</span>
+                  <div class="stack-trace">com.consol.citrus.exceptions.TestCaseFailedException: Validation failed: Values not equal for header element &apos;citrus_http_status_code&apos;, expected &apos;200&apos; but was &apos;500&apos;
 	at com.consol.citrus.TestCase.executeAction(TestCase.java:227)
 	at com.consol.citrus.TestCase.doExecute(TestCase.java:152)
 	at com.consol.citrus.actions.AbstractTestAction.execute(AbstractTestAction.java:42)
@@ -160,10 +159,10 @@
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: com.consol.citrus.exceptions.ValidationException: Failed to validate JSON text:
-{&quot;timestamp&quot;:1554487288595,&quot;path&quot;:&quot;/query-aggregator/v1/egis/123456/getActivity&quot;,&quot;status&quot;:415,&quot;error&quot;:&quot;Unsupported Media Type&quot;,&quot;message&quot;:&quot;Content type &apos;text/plain;charset=UTF-8&apos; not supported&quot;} Number of JSON entries not equal for element: &apos;$.&apos;, expected &apos;1&apos; but was &apos;5&apos;
-	at com.consol.citrus.validation.json.JsonTextMessageValidator.validateMessage(JsonTextMessageValidator.java:127)
-	at com.consol.citrus.validation.json.JsonTextMessageValidator.validateMessage(JsonTextMessageValidator.java:62)
+Caused by: com.consol.citrus.exceptions.ValidationException: Validation failed: Values not equal for header element &apos;citrus_http_status_code&apos;, expected &apos;200&apos; but was &apos;500&apos;
+	at com.consol.citrus.validation.DefaultHeaderValidator.validateHeader(DefaultHeaderValidator.java:77)
+	at com.consol.citrus.validation.DefaultMessageHeaderValidator.validateMessage(DefaultMessageHeaderValidator.java:90)
+	at com.consol.citrus.validation.DefaultMessageHeaderValidator.validateMessage(DefaultMessageHeaderValidator.java:36)
 	at com.consol.citrus.validation.AbstractMessageValidator.validateMessage(AbstractMessageValidator.java:46)
 	at com.consol.citrus.actions.ReceiveMessageAction.validateMessage(ReceiveMessageAction.java:231)
 	at com.consol.citrus.actions.ReceiveMessageAction.doExecute(ReceiveMessageAction.java:128)
@@ -172,11 +171,10 @@ Caused by: com.consol.citrus.exceptions.ValidationException: Failed to validate 
 	at com.consol.citrus.actions.AbstractTestAction.execute(AbstractTestAction.java:42)
 	at com.consol.citrus.TestCase.executeAction(TestCase.java:220)
 	... 29 more
-Caused by: java.lang.IllegalArgumentException: Number of JSON entries not equal for element: &apos;$.&apos;, expected &apos;1&apos; but was &apos;5&apos;
+Caused by: java.lang.IllegalArgumentException: Values not equal for header element &apos;citrus_http_status_code&apos;, expected &apos;200&apos; but was &apos;500&apos;
 	at org.springframework.util.Assert.isTrue(Assert.java:116)
-	at com.consol.citrus.validation.json.JsonTextMessageValidator.validateJson(JsonTextMessageValidator.java:170)
-	at com.consol.citrus.validation.json.JsonTextMessageValidator.validateMessage(JsonTextMessageValidator.java:115)
-	... 37 more
+	at com.consol.citrus.validation.DefaultHeaderValidator.validateHeader(DefaultHeaderValidator.java:64)
+	... 38 more
 
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -186,7 +184,7 @@ Caused by: java.lang.IllegalArgumentException: Number of JSON entries not equal 
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\kartthik.s\AppData\Local\Temp\testng-eclipse-1626517923\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\kartthik.s\AppData\Local\Temp\testng-eclipse--1866574018\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -195,7 +193,7 @@ Caused by: java.lang.IllegalArgumentException: Number of JSON entries not equal 
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.egis.interfacetesting.pcqs.PCQSPersonSearchJSON&quot;/&gt;
+      &lt;class name=&quot;com.egis.interfacetesting.mapping.MappingJSONRequest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -237,14 +235,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TestPCQSAggregatorKAFKAIntegrationPersonSearchJSON')
-data.setCell(0, 2, 'com.egis.interfacetesting.pcqs.PCQSPersonSearchJSON')
-data.setCell(0, 3, 2065);
+data.setCell(0, 1, 'TestPCQSAggregatorKAFKAIntegrationGetActivityJSON')
+data.setCell(0, 2, 'com.egis.interfacetesting.mapping.MappingJSONRequest')
+data.setCell(0, 3, 1417);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -270,40 +268,40 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.egis.interfacetesting.pcqs.PCQSPersonSearchJSON</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.egis.interfacetesting.mapping.MappingJSONRequest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">beforeSuite(org.testng.TestRunner@a83495d)</span>
+                <span class="method-name">beforeSuite(org.testng.TestRunner@4665428b)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">springTestContextBeforeTestClass</span>
-                <span class="method-start">8337 ms</span>
+                <span class="method-start">14061 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">springTestContextPrepareTestInstance</span>
-                <span class="method-start">8337 ms</span>
+                <span class="method-start">14061 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <span class="method-name">springTestContextBeforeTestMethod(public void com.egis.interfacetesting.pcqs.PCQSPersonSearchJSON.TestPCQSAggregatorKAFKAIntegrationPe...)</span>
-                <span class="method-start">8349 ms</span>
+                <span class="method-name">springTestContextBeforeTestMethod(public void com.egis.interfacetesting.mapping.MappingJSONRequest.TestPCQSAggregatorKAFKAIntegrationG...)</span>
+                <span class="method-start">14092 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">TestPCQSAggregatorKAFKAIntegrationPersonSearchJSON</span>
-                <span class="method-start">8349 ms</span>
+                <span class="method-name">TestPCQSAggregatorKAFKAIntegrationGetActivityJSON</span>
+                <span class="method-start">14092 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">springTestContextAfterTestMethod(public void com.egis.interfacetesting.pcqs.PCQSPersonSearchJSON.TestPCQSAggregatorKAFKAIntegrationPe...)</span>
-                <span class="method-start">10414 ms</span>
+                <span class="method-name">springTestContextAfterTestMethod(public void com.egis.interfacetesting.mapping.MappingJSONRequest.TestPCQSAggregatorKAFKAIntegrationG...)</span>
+                <span class="method-start">15524 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">springTestContextAfterTestClass</span>
-                <span class="method-start">10414 ms</span>
+                <span class="method-start">15524 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-suite after">
-                <span class="method-name">afterSuite(org.testng.TestRunner@a83495d)</span>
-                <span class="method-start">10510 ms</span>
+                <span class="method-name">afterSuite(org.testng.TestRunner@4665428b)</span>
+                <span class="method-start">15665 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

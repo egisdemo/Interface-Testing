@@ -162,6 +162,14 @@ public class EndpointConfig {
                             .build();
     }
 	
+	@Bean
+    public HttpClient mappingHTTPClient() {
+        return CitrusEndpoints.http()
+                            .client()
+                            .requestUrl("http://localhost:8080")
+                            .build();
+    }
+	
 	/**
 	 * HTTP server endpoints
 	 */
@@ -181,6 +189,16 @@ public class EndpointConfig {
         return CitrusEndpoints.http()
                 .server()
                 .port(8852)
+                //.endpointAdapter(staticEndpointAdapter())
+                .autoStart(true)
+                .build();
+    }
+	
+	@Bean
+    public HttpServer mappingAPIRedisServer() throws Exception {
+        return CitrusEndpoints.http()
+                .server()
+                .port(6379)
                 //.endpointAdapter(staticEndpointAdapter())
                 .autoStart(true)
                 .build();

@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Apr 05 23:31:26 IST 2019</td>
+<td>Started on:</td><td>Mon Apr 22 12:18:35 IST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>2 seconds (2105 ms)</td>
+<tr><td>Total time:</td><td>1 seconds (1496 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,9 +75,8 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.egis.interfacetesting.pcqs.PCQSPersonSearchJSON.TestPCQSAggregatorKAFKAIntegrationPersonSearchJSON()'><b>TestPCQSAggregatorKAFKAIntegrationPersonSearchJSON</b><br>Test class: com.egis.interfacetesting.pcqs.PCQSPersonSearchJSON</td>
-<td><div><pre>com.consol.citrus.exceptions.TestCaseFailedException: Failed to validate JSON text:
-{&quot;timestamp&quot;:1554487288595,&quot;path&quot;:&quot;/query-aggregator/v1/egis/123456/getActivity&quot;,&quot;status&quot;:415,&quot;error&quot;:&quot;Unsupported Media Type&quot;,&quot;message&quot;:&quot;Content type &apos;text/plain;charset=UTF-8&apos; not supported&quot;} Number of JSON entries not equal for element: &apos;$.&apos;, expected &apos;1&apos; but was &apos;5&apos;
+<td title='com.egis.interfacetesting.mapping.MappingJSONRequest.TestPCQSAggregatorKAFKAIntegrationGetActivityJSON()'><b>TestPCQSAggregatorKAFKAIntegrationGetActivityJSON</b><br>Test class: com.egis.interfacetesting.mapping.MappingJSONRequest</td>
+<td><div><pre>com.consol.citrus.exceptions.TestCaseFailedException: Validation failed: Values not equal for header element &apos;citrus_http_status_code&apos;, expected &apos;200&apos; but was &apos;500&apos;
 	at com.consol.citrus.TestCase.executeAction(TestCase.java:227)
 	at com.consol.citrus.TestCase.doExecute(TestCase.java:152)
 	at com.consol.citrus.actions.AbstractTestAction.execute(AbstractTestAction.java:42)
@@ -108,10 +107,10 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: com.consol.citrus.exceptions.ValidationException: Failed to validate JSON text:
-{&quot;timestamp&quot;:1554487288595,&quot;path&quot;:&quot;/query-aggregator/v1/egis/123456/getActivity&quot;,&quot;status&quot;:415,&quot;error&quot;:&quot;Unsupported Media Type&quot;,&quot;message&quot;:&quot;Content type &apos;text/plain;charset=UTF-8&apos; not supported&quot;} Number of JSON entries not equal for element: &apos;$.&apos;, expected &apos;1&apos; but was &apos;5&apos;
-	at com.consol.citrus.validation.json.JsonTextMessageValidator.validateMessage(JsonTextMessageValidator.java:127)
-	at com.consol.citrus.validation.json.JsonTextMessageValidator.validateMessage(JsonTextMessageValidator.java:62)
+Caused by: com.consol.citrus.exceptions.ValidationException: Validation failed: Values not equal for header element &apos;citrus_http_status_code&apos;, expected &apos;200&apos; but was &apos;500&apos;
+	at com.consol.citrus.validation.DefaultHeaderValidator.validateHeader(DefaultHeaderValidator.java:77)
+	at com.consol.citrus.validation.DefaultMessageHeaderValidator.validateMessage(DefaultMessageHeaderValidator.java:90)
+	at com.consol.citrus.validation.DefaultMessageHeaderValidator.validateMessage(DefaultMessageHeaderValidator.java:36)
 	at com.consol.citrus.validation.AbstractMessageValidator.validateMessage(AbstractMessageValidator.java:46)
 	at com.consol.citrus.actions.ReceiveMessageAction.validateMessage(ReceiveMessageAction.java:231)
 	at com.consol.citrus.actions.ReceiveMessageAction.doExecute(ReceiveMessageAction.java:128)
@@ -120,14 +119,12 @@ Caused by: com.consol.citrus.exceptions.ValidationException: Failed to validate 
 	at com.consol.citrus.actions.AbstractTestAction.execute(AbstractTestAction.java:42)
 	at com.consol.citrus.TestCase.executeAction(TestCase.java:220)
 	... 29 more
-Caused by: java.lang.IllegalArgumentException: Number of JSON entries not equal for element: &apos;$.&apos;, expected &apos;1&apos; but was &apos;5&apos;
+Caused by: java.lang.IllegalArgumentException: Values not equal for header element &apos;citrus_http_status_code&apos;, expected &apos;200&apos; but was &apos;500&apos;
 	at org.springframework.util.Assert.isTrue(Assert.java:116)
-	at com.consol.citrus.validation.json.JsonTextMessageValidator.validateJson(JsonTextMessageValidator.java:170)
-	at com.consol.citrus.validation.json.JsonTextMessageValidator.validateMessage(JsonTextMessageValidator.java:115)
-	... 37 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace809260538", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace809260538'><pre>com.consol.citrus.exceptions.TestCaseFailedException: Failed to validate JSON text:
-{&quot;timestamp&quot;:1554487288595,&quot;path&quot;:&quot;/query-aggregator/v1/egis/123456/getActivity&quot;,&quot;status&quot;:415,&quot;error&quot;:&quot;Unsupported Media Type&quot;,&quot;message&quot;:&quot;Content type &apos;text/plain;charset=UTF-8&apos; not supported&quot;} Number of JSON entries not equal for element: &apos;$.&apos;, expected &apos;1&apos; but was &apos;5&apos;
+	at com.consol.citrus.validation.DefaultHeaderValidator.validateHeader(DefaultHeaderValidator.java:64)
+	... 38 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1890777616", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1890777616'><pre>com.consol.citrus.exceptions.TestCaseFailedException: Validation failed: Values not equal for header element &apos;citrus_http_status_code&apos;, expected &apos;200&apos; but was &apos;500&apos;
 	at com.consol.citrus.TestCase.executeAction(TestCase.java:227)
 	at com.consol.citrus.TestCase.doExecute(TestCase.java:152)
 	at com.consol.citrus.actions.AbstractTestAction.execute(AbstractTestAction.java:42)
@@ -158,10 +155,10 @@ Caused by: java.lang.IllegalArgumentException: Number of JSON entries not equal 
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: com.consol.citrus.exceptions.ValidationException: Failed to validate JSON text:
-{&quot;timestamp&quot;:1554487288595,&quot;path&quot;:&quot;/query-aggregator/v1/egis/123456/getActivity&quot;,&quot;status&quot;:415,&quot;error&quot;:&quot;Unsupported Media Type&quot;,&quot;message&quot;:&quot;Content type &apos;text/plain;charset=UTF-8&apos; not supported&quot;} Number of JSON entries not equal for element: &apos;$.&apos;, expected &apos;1&apos; but was &apos;5&apos;
-	at com.consol.citrus.validation.json.JsonTextMessageValidator.validateMessage(JsonTextMessageValidator.java:127)
-	at com.consol.citrus.validation.json.JsonTextMessageValidator.validateMessage(JsonTextMessageValidator.java:62)
+Caused by: com.consol.citrus.exceptions.ValidationException: Validation failed: Values not equal for header element &apos;citrus_http_status_code&apos;, expected &apos;200&apos; but was &apos;500&apos;
+	at com.consol.citrus.validation.DefaultHeaderValidator.validateHeader(DefaultHeaderValidator.java:77)
+	at com.consol.citrus.validation.DefaultMessageHeaderValidator.validateMessage(DefaultMessageHeaderValidator.java:90)
+	at com.consol.citrus.validation.DefaultMessageHeaderValidator.validateMessage(DefaultMessageHeaderValidator.java:36)
 	at com.consol.citrus.validation.AbstractMessageValidator.validateMessage(AbstractMessageValidator.java:46)
 	at com.consol.citrus.actions.ReceiveMessageAction.validateMessage(ReceiveMessageAction.java:231)
 	at com.consol.citrus.actions.ReceiveMessageAction.doExecute(ReceiveMessageAction.java:128)
@@ -170,14 +167,13 @@ Caused by: com.consol.citrus.exceptions.ValidationException: Failed to validate 
 	at com.consol.citrus.actions.AbstractTestAction.execute(AbstractTestAction.java:42)
 	at com.consol.citrus.TestCase.executeAction(TestCase.java:220)
 	... 29 more
-Caused by: java.lang.IllegalArgumentException: Number of JSON entries not equal for element: &apos;$.&apos;, expected &apos;1&apos; but was &apos;5&apos;
+Caused by: java.lang.IllegalArgumentException: Values not equal for header element &apos;citrus_http_status_code&apos;, expected &apos;200&apos; but was &apos;500&apos;
 	at org.springframework.util.Assert.isTrue(Assert.java:116)
-	at com.consol.citrus.validation.json.JsonTextMessageValidator.validateJson(JsonTextMessageValidator.java:170)
-	at com.consol.citrus.validation.json.JsonTextMessageValidator.validateMessage(JsonTextMessageValidator.java:115)
-	... 37 more
+	at com.consol.citrus.validation.DefaultHeaderValidator.validateHeader(DefaultHeaderValidator.java:64)
+	... 38 more
 </pre></div></td>
-<td>2</td>
-<td>com.egis.interfacetesting.pcqs.PCQSPersonSearchJSON@515c6049</td></tr>
+<td>1</td>
+<td>com.egis.interfacetesting.mapping.MappingJSONRequest@515c6049</td></tr>
 </table><p>
 </body>
 </html>
