@@ -170,6 +170,14 @@ public class EndpointConfig {
                             .build();
     }
 	
+	@Bean
+    public HttpClient EncryptionHTTPClient() {
+        return CitrusEndpoints.http()
+                            .client()
+                            .requestUrl("http://localhost:8080")
+                            .build();
+    }
+	
 	/**
 	 * HTTP server endpoints
 	 */
@@ -194,7 +202,7 @@ public class EndpointConfig {
                 .build();
     }
 	
-	@Bean
+	/*@Bean
     public HttpServer mappingAPIRedisServer() throws Exception {
         return CitrusEndpoints.http()
                 .server()
@@ -202,7 +210,7 @@ public class EndpointConfig {
                 //.endpointAdapter(staticEndpointAdapter())
                 .autoStart(true)
                 .build();
-    }
+    }*/
 	
 	/*@Bean
     public StaticEndpointAdapter staticEndpointAdapter() {
