@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<wsdl:definitions name="AdisApi" targetNamespace="http://egis.com/services/adisapi"
+                  xmlns:tns="http://egis.com/services/adisapi"
+  xmlns:types="http://egis.com/adisapi"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://egis.com/adisapi"
+                xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+       <xsd:include namespace="http://egis.com/adisapi" schemaLocation="AdisSchema.xsd"/>
+      
+    </xsd:schema>
+  </wsdl:types>
+
+  <wsdl:message name="PersonInput">
+    <wsdl:part name="personRequest" element="types:personRequest" />
+  </wsdl:message>
+
+  <wsdl:message name="PersonOutput">
+    <wsdl:part name="personResponse" element="types:personResponse" />
+  </wsdl:message>
+
+  <wsdl:message name="ActivityInput">
+    <wsdl:part name="activityRequest" element="types:activityRequest" />
+  </wsdl:message>
+  <wsdl:message name="ActivityOutput">
+    <wsdl:part name="activityResponse" element="types:activityResponse"/>
+  </wsdl:message>
+  
+  <wsdl:portType name="AdisApi_PortType">
+    <wsdl:operation name="getPersonDetails">
+      <wsdl:input message="tns:PersonInput" />
+      <wsdl:output message="tns:PersonOutput" />
+    </wsdl:operation>
+    <wsdl:operation name="getActivityDetails">
+      <wsdl:input message="tns:ActivityInput" />
+      <wsdl:output message="tns:ActivityOutput" />
+    </wsdl:operation>
+  </wsdl:portType>
+
+  <wsdl:binding name="AdisApi_SoapBinding" type="tns:AdisApi_PortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getPersonDetails">
+      <soap:operation soapAction="http://egis.com/services/adisapi/getPersonDetails" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getActivityDetails">
+      <soap:operation soapAction="http://egis.com/services/adisapi/getActivityDetails" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+
+  <wsdl:service name="AdisApi_Service">
+    <wsdl:documentation>ADIS Api service</wsdl:documentation>
+    <wsdl:port name="AdisApi_Port" binding="tns:AdisApi_SoapBinding">
+      <soap:address location="http://localhost:8080/egis/ws/adisapi" />
+    </wsdl:port>
+  </wsdl:service>
+
+</wsdl:definitions>

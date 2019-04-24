@@ -1,7 +1,7 @@
 
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-  xmlns:types="http://localhost:8080/adisapi"
-targetNamespace="http://localhost:8080/adisapi">
+  xmlns:types="http://egis.com/adisapi"
+targetNamespace="http://egis.com/adisapi">
 
       <xsd:element name="personRequest">
         <xsd:complexType>

@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<activityDetailsRequest>
-  <aNumber>str1234</aNumber>
-</activityDetailsRequest>
+
+      <adis:activityRequest xmlns:adis="http://egis.com/adisapi">
+         <aNumber>A4237898</aNumber>
+      </adis:activityRequest>
+  

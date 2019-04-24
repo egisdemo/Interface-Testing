@@ -1,7 +1,14 @@
 package configurations;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
+import java.util.UUID;
+
+import javax.xml.soap.MessageFactory;
+import javax.xml.soap.SOAPConstants;
+import javax.xml.soap.SOAPException;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.io.ClassPathResource;
@@ -22,6 +29,7 @@ import com.consol.citrus.kafka.endpoint.KafkaEndpoint;
 import com.consol.citrus.message.Message;
 import com.consol.citrus.ws.client.WebServiceClient;
 import com.consol.citrus.xml.XsdSchemaRepository;
+import com.consol.citrus.xml.namespace.NamespaceContextBuilder;
 
 public class EndpointConfig {
 	
@@ -31,16 +39,28 @@ public class EndpointConfig {
 	 */
 	
 	@Bean
-    public SimpleXsdSchema todoListSchema() {
+    public SimpleXsdSchema AdisSchema() {
         return new SimpleXsdSchema(new ClassPathResource("schema/AdisSchema.xsd"));
     }
-
-    @Bean
+	
+	
+   /*@Bean
     public XsdSchemaRepository schemaRepository() {
         XsdSchemaRepository schemaRepository = new XsdSchemaRepository();
-        schemaRepository.getSchemas().add(todoListSchema());
+        schemaRepository.getSchemas().add(AdisSchema());
         return schemaRepository;
-    }
+    }*/
+    
+    
+	
+	public class NoTargetNamespaceXsdSchema extends SimpleXsdSchema {
+
+	    @Override
+	    public String getTargetNamespace() {
+	        return Optional.ofNullable(super.getTargetNamespace())
+	                       .orElse("urn:uuid:" + UUID.randomUUID());
+	    }
+	}
     
     /**
      * Kafka server    
@@ -232,18 +252,24 @@ public class EndpointConfig {
 	/**
 	 * SOAP Clients setup
 	 * @return
+	 * @throws SOAPException 
 	 */
 	
 	@Bean
-    public SoapMessageFactory messageFactory() {
-        return new SaajSoapMessageFactory();
+    public SoapMessageFactory saasFactory() throws SOAPException {
+		SaajSoapMessageFactory factory = new SaajSoapMessageFactory();
+		MessageFactory mfactory = MessageFactory.newInstance(SOAPConstants.DEFAULT_SOAP_PROTOCOL);
+				factory.setMessageFactory(mfactory);
+				
+        return factory;
     }
 	
 	@Bean
-    public WebServiceClient adisSOAPClient() {
+    public WebServiceClient adisSOAPClient() throws SOAPException {
         return CitrusEndpoints.soap()
-                            .client()
-                            .defaultUri("http://localhost:8081/AdisFile/")
+                            .client()                         
+                            .defaultUri("http://localhost:8080/egis/ws/adisapi")
+                            .messageFactory(saasFactory())
                             .build();
     }
 	
